@@ -45,8 +45,6 @@ btn.addEventListener('click', async(evt)=>{
     let response = await fetch(URL);
     let data = await response.json();
     let rate=data[tocurr.value.toLowerCase()];
-    console.log(rate);
-
-    let finalamount=amount*rate;
+    let finalamount=amtvalue*rate;
     msg.innerText=`${amtvalue} ${fromcurr.value}=${finalamount} ${tocurr.value}`;
 });
